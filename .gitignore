@@ -1,3 +1,6 @@
+.project
+examples/browserify/bundle.js
+
 # Logs
 logs
 *.log
