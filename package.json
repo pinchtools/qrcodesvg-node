@@ -1,6 +1,6 @@
 {
   "name": "qrcodesvg",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "create custom QR Code with SVG",
   "main": "lib/index.js",
   "scripts": {
