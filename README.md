@@ -5,7 +5,7 @@ Create custom QR Code with SVG
 
 ## Install
 
-    npm install qrcodesvg --save-dev
+    npm install qrcodesvg --save
 
 ## Usage
 
