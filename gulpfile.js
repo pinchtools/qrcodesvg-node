@@ -4,8 +4,12 @@ var gulp = require('gulp'),
 open = require('gulp-open'),
 fs = require("fs"),
 browserify = require("browserify"),
-http = require('http');
+http = require('http'),
+jshint = require('gulp-jshint');;
 
+/**
+ * basic examples of Qrcodesvg executing on server-side
+ */
 gulp.task('server', function() {
     var Qrcodesvg = require('./lib/index.js');
 
@@ -69,6 +73,9 @@ gulp.task('server', function() {
 
 });
 
+/**
+ * Generate a version of Qrcodesvg for client-side
+ */
 gulp.task('browserify', function() {
     // browserify '/examples/browserify/main.js' > '/examples/browserify/bundle.js'
     browserify("examples/browserify/main.js")
@@ -81,6 +88,9 @@ gulp.task('browserify', function() {
     return;
 });
 
+/**
+ * Start local example once the bundle has been generated
+ */
 gulp.task('open-browserify-example', function() {
     //wait until bundle.js has been generated
     //then start open example page in a browser
@@ -92,6 +102,18 @@ gulp.task('open-browserify-example', function() {
     return;
 });
 
+/**
+ * Generate a clien-side bundle and launch the example on a browser
+ */
 gulp.task('client', ['browserify', 'open-browserify-example']);
+
+
+gulp.task('jshint', function() {
+	
+    gulp.src(['lib/*.js'])
+    .pipe(jshint())
+    .pipe(jshint.reporter('fail'));
+    
+});
 
 gulp.task('default');
