@@ -93,4 +93,14 @@ describe ("Qrcodesvg", function() {
 
     });
 
+    describe("background()", function() {
+	it ("needs settings or attributes", function() {
+	    var qrcode	  = new Qrcodesvg("Hello", qrCodeSize);
+	    
+	    (function () {
+		qrcode.background();
+	    }).should.Throw('background method needs at least settings or attributes');
+	});
+    });
+    
 });
