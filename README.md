@@ -1,6 +1,9 @@
 qrcodesvg-node
 ===========
 
+[![Build Status](https://travis-ci.org/pinchtools/qrcodesvg-node.svg)](https://travis-ci.org/pinchtools/qrcodesvg-node)
+[![npm version](https://badge.fury.io/js/qrcodesvg.svg)](https://badge.fury.io/js/qrcodesvg)
+
 Create custom QR Code with SVG
 
 ## Install
